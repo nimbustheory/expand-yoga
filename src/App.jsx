@@ -1144,7 +1144,7 @@ function PageTitle({ title, subtitle }) {
 
 function PageHero({ title, subtitle, image }) {
   return (
-    <div style={{ position: "relative", overflow: "hidden", padding: "28px 20px 20px", minHeight: 120, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+    <div style={{ position: "relative", overflow: "hidden", padding: "28px 20px 20px", minHeight: 240, display: "flex", flexDirection: "column", justifyContent: "flex-end", marginBottom: 16 }}>
       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.7)" }} />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.45) 100%)" }} />
       <div style={{ position: "relative", zIndex: 2 }}>
