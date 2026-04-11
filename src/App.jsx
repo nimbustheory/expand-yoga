@@ -1546,7 +1546,7 @@ export default function App() {
           <aside style={{ width: 240, background: "#0e1020", borderRight: "1px solid #1e2235", display: "flex", flexDirection: "column", position: "fixed", height: "100vh", zIndex: 20 }}>
             <div style={{ padding: 16, borderBottom: "1px solid #1e2235" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <div style={{ width: 38, height: 38, borderRadius: 10, background: T.accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#fff" }}>EX</div>
+                <img src={STUDIO_IMAGES.logo} alt={STUDIO_CONFIG.name} style={{ width: 38, height: 38, borderRadius: 10, objectFit: "contain" }} onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} /><div style={{ width: 38, height: 38, borderRadius: 10, background: T.accent, display: "none", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#fff" }}>EX</div>
                 <div>
                   <span style={{ fontFamily: "'Syne', serif", fontSize: 18, color: "#fff", fontWeight: 600, display: "block", lineHeight: 1 }}>EXPAND</span>
                   <span style={{ fontSize: 9, color: "#71717a", textTransform: "uppercase", letterSpacing: "0.15em" }}>Admin Panel</span>
@@ -1590,7 +1590,7 @@ export default function App() {
         {/* Header */}
         <header style={{ position: "sticky", top: 0, zIndex: 30, background: T.bg, color: "#fff", padding: "10px 14px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <button onClick={handleLogoClick} style={{ display: "flex", alignItems: "center", gap: 8, background: "none", border: "none", cursor: "pointer", color: "#fff" }}>
-            <div style={{ width: 38, height: 38, borderRadius: 10, background: T.accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#fff" }}>EX</div>
+            <img src={STUDIO_IMAGES.logo} alt={STUDIO_CONFIG.name} style={{ width: 38, height: 38, borderRadius: 10, objectFit: "contain" }} onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} /><div style={{ width: 38, height: 38, borderRadius: 10, background: T.accent, display: "none", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#fff" }}>EX</div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span style={{ fontFamily: "'Syne', serif", fontSize: 20, lineHeight: 1, letterSpacing: "0.02em" }}>{STUDIO_CONFIG.name}</span>
               <span style={{ fontSize: 9, color: "#71717a", textTransform: "uppercase", letterSpacing: "0.15em" }}>{STUDIO_CONFIG.subtitle}</span>
