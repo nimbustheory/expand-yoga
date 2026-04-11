@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Calendar, Flame, Heart, Users, CreditCard, Star, Bell, Shield, Sparkles, MapPin } from "lucide-react";
 import config from "./demo.config.js";
 import App from "./App.jsx";
@@ -10,10 +11,30 @@ const iconMap = {
 
 export default function DemoWrapper() {
   const ac = config.accentColor;
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const handler = (e) => setIsAdmin(e.detail.isAdmin);
+    window.addEventListener("admin-mode-change", handler);
+    return () => window.removeEventListener("admin-mode-change", handler);
+  }, []);
+
+  if (isAdmin) {
+    return (
+      <div style={{ minHeight: "100vh", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+        <App />
+        <style>{`
+          body { background: #0e1020 !important; }
+          ::-webkit-scrollbar { display: none; }
+          * { scrollbar-width: none; }
+        `}</style>
+      </div>
+    );
+  }
 
   return (
     <div style={{ display: "flex", justifyContent: "center", minHeight: "100vh", background: "#f5f4f1", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
-      {/* ——— LEFT SIDEBAR ——— */}
+      {/* LEFT SIDEBAR */}
       <aside className="demo-sidebar demo-sidebar-left" style={{
         width: 320, flexShrink: 0, position: "sticky", top: 0, height: "100vh",
         overflowY: "auto", padding: "40px 32px", display: "flex", flexDirection: "column",
@@ -54,23 +75,23 @@ export default function DemoWrapper() {
 
         {/* Footer */}
         <p style={{ fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.12em", color: "#b0ada6", marginTop: 40 }}>
-          Built by LUMI — LumiClass.app
+          Built by LUMI -- LumiClass.app
         </p>
       </aside>
 
-      {/* ——— CENTER: PHONE FRAME ——— */}
+      {/* CENTER: PHONE FRAME */}
       <div style={{
         width: 390, flexShrink: 0, position: "relative",
         boxShadow: "0 8px 40px rgba(0,0,0,.12), 0 2px 12px rgba(0,0,0,.06)",
         borderRadius: 0, overflow: "hidden", height: "100vh",
-        transform: "translateZ(0)", // contain fixed elements
+        transform: "translateZ(0)",
       }}>
         <div style={{ height: "100%", overflow: "auto" }}>
           <App />
         </div>
       </div>
 
-      {/* ——— RIGHT SIDEBAR ——— */}
+      {/* RIGHT SIDEBAR */}
       <aside className="demo-sidebar demo-sidebar-right" style={{
         width: 340, flexShrink: 0, position: "sticky", top: 0, height: "100vh",
         overflowY: "auto", padding: "40px 32px", display: "flex", flexDirection: "column", gap: 20,
@@ -96,7 +117,7 @@ export default function DemoWrapper() {
         }}>
           <h3 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 8px", fontFamily: "'Syne', serif" }}>Ready to Launch?</h3>
           <p style={{ fontSize: 14, color: "rgba(255,255,255,.65)", lineHeight: 1.55, margin: "0 0 16px" }}>
-            Get a custom-branded loyalty app built for your studio — designed, populated, and ready to deploy.
+            Get a custom-branded loyalty app built for your studio -- designed, populated, and ready to deploy.
           </p>
           <a href="https://lumiclass.app" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-block", padding: "10px 24px", borderRadius: 8,
@@ -120,6 +141,8 @@ export default function DemoWrapper() {
         @media (max-width: 1100px) {
           .demo-sidebar { display: none !important; }
         }
+        ::-webkit-scrollbar { display: none; }
+        * { scrollbar-width: none; }
       `}</style>
     </div>
   );

@@ -59,18 +59,21 @@ const STUDIO_CONFIG = {
 // ═══════════════════════════════════════════════════════════════
 //  STUDIO_IMAGES — All image URLs from Expand Yoga CDN
 // ═══════════════════════════════════════════════════════════════
+const SQ = "?format=750w";
 const STUDIO_IMAGES = {
-  logo: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/d8f1272e-d5c4-46c5-963a-2e5719481931/Logo_orange.png",
-  logoStacked: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/a8fe41c9-d12f-4418-987e-533c4f8932a2/Logo_orange+%282%29.png",
-  heroYouBelongHere: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/52976d47-ce7c-4411-890a-4309e6efe6f5/ExpandYoga-607.jpg",
-  welcomeEntrance: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/0f6f69c0-8c54-4e72-89f9-379ace331adf/ExpandYoga-002.jpg",
-  classesHero: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/36746a88-429a-4ca2-9607-516c149a310c/ExpandYoga-464.jpg",
-  powerBeats: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/2f3e8b6e-47ee-4491-aabe-d553005e1f52/ExpandYoga-535.jpg",
-  events: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/9548e9fa-38f8-4470-8aab-775e818feb02/ExpandYogaFederalWay-022023-163.jpg",
-  about: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/b661cad7-07b0-43f0-b30b-1468d4b5b9d5/ExpandYoga-147.jpg",
-  pricing: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/0f6f69c0-8c54-4e72-89f9-379ace331adf/ExpandYoga-002.jpg",
-  teacherTraining: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/2bade28c-75ed-4d70-a023-3c877c87175b/ExpandYoga-285.jpg",
-  candlelitPower: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/52976d47-ce7c-4411-890a-4309e6efe6f5/ExpandYoga-607.jpg",
+  logo: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/d8f1272e-d5c4-46c5-963a-2e5719481931/Logo_orange.png?format=200w",
+  logoStacked: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/a8fe41c9-d12f-4418-987e-533c4f8932a2/Logo_orange+%282%29.png?format=200w",
+  heroYouBelongHere: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/52976d47-ce7c-4411-890a-4309e6efe6f5/ExpandYoga-607.jpg" + SQ,
+  welcomeEntrance: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/0f6f69c0-8c54-4e72-89f9-379ace331adf/ExpandYoga-002.jpg" + SQ,
+  classesHero: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/36746a88-429a-4ca2-9607-516c149a310c/ExpandYoga-464.jpg" + SQ,
+  powerBeats: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/2f3e8b6e-47ee-4491-aabe-d553005e1f52/ExpandYoga-535.jpg" + SQ,
+  events: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/9548e9fa-38f8-4470-8aab-775e818feb02/ExpandYogaFederalWay-022023-163.jpg" + SQ,
+  about: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/b661cad7-07b0-43f0-b30b-1468d4b5b9d5/ExpandYoga-147.jpg" + SQ,
+  pricing: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/0f6f69c0-8c54-4e72-89f9-379ace331adf/ExpandYoga-002.jpg" + SQ,
+  teacherTraining: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/2bade28c-75ed-4d70-a023-3c877c87175b/ExpandYoga-285.jpg" + SQ,
+  candlelitPower: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/52976d47-ce7c-4411-890a-4309e6efe6f5/ExpandYoga-607.jpg" + SQ,
+  community: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/0b87a52b-8997-4105-9683-da287452c0a9/ExpandYoga-494.jpg" + SQ,
+  studioInterior: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/7e0510eb-0397-47a9-83ce-d84475adc061/ExpandYoga-283.jpg" + SQ,
   teachers: {},
 };
 
@@ -558,7 +561,7 @@ function CommunityPage() {
 
   return (
     <div style={{ padding: "0 16px" }}>
-      <PageHero title="Community" subtitle="Celebrate each other's wins at Expand" image={STUDIO_IMAGES.about} />
+      <PageHero title="Community" subtitle="Celebrate each other's wins at Expand" image={STUDIO_IMAGES.community} />
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {COMMUNITY_FEED.map(item => {
           const myC = feedCelebrations[item.id] || 0;
@@ -718,7 +721,7 @@ function GuestPassPage() {
 
   return (
     <div style={{ padding: "0 16px" }}>
-      <PageHero title="Guest Passes" subtitle="Bring a friend to Expand" image={STUDIO_IMAGES.welcomeEntrance} />
+      <PageHero title="Guest Passes" subtitle="Bring a friend to Expand" image={STUDIO_IMAGES.studioInterior} />
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
         <div style={{ background: T.accentGhost, border: `1px solid ${T.accentBorder}`, borderRadius: 12, padding: "16px 14px", textAlign: "center" }}>
           <Gift size={20} color={T.accent} style={{ margin: "0 auto 6px" }} />
@@ -1097,15 +1100,15 @@ function AdminSettingsPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
           <div>
             <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#9ca3af", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>Studio Name</label>
-            <input value="EXPAND" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
+            <input defaultValue="EXPAND" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
           </div>
           <div>
             <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#9ca3af", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>Email</label>
-            <input value="expandyoga@gmail.com" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
+            <input defaultValue="expandyoga@gmail.com" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
           </div>
           <div>
             <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#9ca3af", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>Phone</label>
-            <input value="(253) 886-7820" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
+            <input defaultValue="(253) 886-7820" style={{ width: "100%", padding: "10px 14px", background: "#0e1020", border: "1px solid #2a2e42", borderRadius: 8, color: "#fff", fontSize: 13, outline: "none" }} />
           </div>
           <button style={{ padding: "12px 0", borderRadius: 8, border: "none", background: T.accent, color: "#fff", fontWeight: 700, fontSize: 14, cursor: "pointer" }}>Save Changes</button>
         </div>
@@ -1131,16 +1134,6 @@ function SectionHeader({ title, linkText, linkPage }) {
     </div>
   );
 }
-
-function PageTitle({ title, subtitle }) {
-  return (
-    <div style={{ marginBottom: 20 }}>
-      <h1 style={{ fontFamily: "'Syne', Georgia, serif", fontSize: 34, margin: 0 }}>{title}</h1>
-      {subtitle && <p style={{ fontSize: 13, color: T.textMuted, margin: "4px 0 0" }}>{subtitle}</p>}
-    </div>
-  );
-}
-
 
 function PageHero({ title, subtitle, image }) {
   return (
@@ -1340,10 +1333,10 @@ function SettingsModal({ onClose }) {
 // ═══════════════════════════════════════════════════════════════
 function NotificationsModal({ onClose }) {
   const notifications = [
-    { id: "n1", title: "Class Reminder", message: "Power Beats with Erin starts in 1 hour", time: "55 min ago", read: false },
-    { id: "n2", title: "March Madness Update", message: "You advanced to Round 3! Keep the momentum going.", time: "2 hrs ago", read: false },
-    { id: "n3", title: "Community", message: "Ashley P. just reached 100 classes! Celebrate with her.", time: "4 hrs ago", read: true },
-    { id: "n4", title: "New Class Added", message: "Slow Flow is now on the schedule — Mondays & Fridays at noon", time: "Yesterday", read: true },
+    { id: "n1", title: "Class Reminder", message: "Hot Vinyasa with Matt starts in 1 hour", time: "55 min ago", read: false },
+    { id: "n2", title: "Streak Alert", message: "16 days strong! Keep showing up on the mat.", time: "2 hrs ago", read: false },
+    { id: "n3", title: "Community", message: "Ashley M. just reached 100 classes! Celebrate with her.", time: "4 hrs ago", read: true },
+    { id: "n4", title: "New Class Added", message: "Barre Yoga with Jordan is now on the schedule — Tuesdays & Thursdays at 4:30 PM", time: "Yesterday", read: true },
   ];
 
   return (
@@ -1460,6 +1453,10 @@ export default function App() {
   const contentRef = useRef(null);
 
   useEffect(() => {
+    window.dispatchEvent(new CustomEvent("admin-mode-change", { detail: { isAdmin } }));
+  }, [isAdmin]);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
     if (contentRef.current) contentRef.current.scrollTo(0, 0);
   }, [page]);
@@ -1546,7 +1543,7 @@ export default function App() {
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 38, height: 38, borderRadius: 10, background: T.accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#fff" }}>EX</div>
                 <div>
-                  <span style={{ fontFamily: "'Syne', serif", fontSize: 18, color: "#fff", fontWeight: 600, display: "block", lineHeight: 1 }}>ECLIPSE</span>
+                  <span style={{ fontFamily: "'Syne', serif", fontSize: 18, color: "#fff", fontWeight: 600, display: "block", lineHeight: 1 }}>EXPAND</span>
                   <span style={{ fontSize: 9, color: "#71717a", textTransform: "uppercase", letterSpacing: "0.15em" }}>Admin Panel</span>
                 </div>
               </div>

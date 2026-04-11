@@ -4,7 +4,7 @@ const demoConfig = {
   studioSubtitle: "Yoga Studio App",
   tagline: "Work hard. Have fun.",
   logoMark: "EX",
-  logoUrl: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/d8f1272e-d5c4-46c5-963a-2e5719481931/Logo_orange.png",
+  logoUrl: "https://images.squarespace-cdn.com/content/v1/62b3525159df5c5f6a478230/d8f1272e-d5c4-46c5-963a-2e5719481931/Logo_orange.png?format=200w",
   neighborhood: "6th Ave District, Tacoma",
   accentColor: "#e05a20",
 
