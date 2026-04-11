@@ -273,8 +273,8 @@ function HomePage() {
     <div className="pb-6">
       {/* Hero */}
       <section style={{ position: "relative", overflow: "hidden", color: "#fff", padding: "32px 22px", minHeight: 240 }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${STUDIO_IMAGES.heroYouBelongHere})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.7)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.45) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${STUDIO_IMAGES.heroYouBelongHere})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.9)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.25) 100%)" }} />
         <div style={{ position: "absolute", top: 16, right: 20, fontSize: 80, opacity: 0.06, lineHeight: 1, zIndex: 1 }}>EX</div>
         <div style={{ position: "relative", zIndex: 2 }}>
           <p style={{ color: T.accent, fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: 8 }}>
@@ -284,7 +284,7 @@ function HomePage() {
             {STUDIO_CONFIG.heroLine1}<br/>
             <span style={{ color: T.accent, fontStyle: "italic" }}>{STUDIO_CONFIG.heroLine2}</span>
           </h1>
-          <p style={{ color: "#a8b0c0", fontSize: 13, maxWidth: 280, marginTop: 10, lineHeight: 1.5 }}>{STUDIO_CONFIG.description}</p>
+          <p style={{ color: "#fff", fontSize: 13, maxWidth: 280, marginTop: 10, lineHeight: 1.5 }}>{STUDIO_CONFIG.description}</p>
         </div>
       </section>
 
@@ -1143,11 +1143,11 @@ function SectionHeader({ title, linkText, linkPage }) {
 function PageHero({ title, subtitle, image }) {
   return (
     <div style={{ position: "relative", overflow: "hidden", padding: "28px 20px 20px", minHeight: 240, display: "flex", flexDirection: "column", justifyContent: "flex-end", marginBottom: 16 }}>
-      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.7)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.45) 100%)" }} />
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.9)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.25) 100%)" }} />
       <div style={{ position: "relative", zIndex: 2 }}>
         <h1 style={{ fontFamily: "'Syne', Georgia, serif", fontSize: 34, margin: 0, color: "#fff" }}>{title}</h1>
-        {subtitle && <p style={{ fontSize: 13, color: "rgba(255,255,255,.75)", margin: "4px 0 0" }}>{subtitle}</p>}
+        {subtitle && <p style={{ fontSize: 13, color: "#fff", margin: "4px 0 0" }}>{subtitle}</p>}
       </div>
     </div>
   );
@@ -1253,11 +1253,11 @@ function CTACard() {
   const { setPage } = useContext(AppContext);
   return (
     <div style={{ borderRadius: 14, padding: "22px 20px", color: "#fff", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${STUDIO_IMAGES.welcomeEntrance})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.7)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1))" }} />
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${STUDIO_IMAGES.welcomeEntrance})`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.9)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.0))" }} />
       <div style={{ position: "absolute", top: -20, right: -10, fontSize: 100, opacity: 0.08, lineHeight: 1, zIndex: 1 }}>EX</div>
       <h3 style={{ fontFamily: "'Syne', serif", fontSize: 24, margin: "0 0 6px", fontWeight: 600, position: "relative", zIndex: 2 }}>New Student Special</h3>
-      <p style={{ fontSize: 13, color: "rgba(255,255,255,.75)", margin: "0 0 14px", maxWidth: 260, position: "relative", zIndex: 2 }}>20 days of unlimited yoga for just $20. New to Expand? Walk in any time at both Tacoma and Federal Way locations.</p>
+      <p style={{ fontSize: 13, color: "#fff", margin: "0 0 14px", maxWidth: 260, position: "relative", zIndex: 2 }}>20 days of unlimited yoga for just $20. New to Expand? Walk in any time at both Tacoma and Federal Way locations.</p>
       <button onClick={() => setPage("membership")} style={{ padding: "10px 24px", borderRadius: 8, border: "none", background: T.accent, color: "#fff", fontWeight: 700, fontSize: 14, cursor: "pointer", fontFamily: "'Syne', serif", letterSpacing: "0.03em", position: "relative", zIndex: 2 }}>
         Get Started
       </button>
